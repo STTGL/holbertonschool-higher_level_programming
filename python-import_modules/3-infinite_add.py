@@ -1,15 +1,14 @@
 #!/usr/bin/python3
-from sys import argv
+import sys
 
-def func():
-    argc = len(argv)
-    total_sum = 0
+if __name__ == '__main__':
+    av = sys.argv
+    l_av = len(av)
+    sum = 0
 
-    for i in range(1, argc):
-        total_sum += int(argv[i])
+    if l_av > 1:
+        for i in range(1, l_av):
+            sum += int(av[i])
 
-    print(total_sum)
-
-if __name__ == "__main__":
-    func()
+    print(sum)
 
